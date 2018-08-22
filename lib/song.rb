@@ -19,6 +19,7 @@ class Song
         else
           self.artist.name = name
     end
+    artist.add_song(self)
   end
 
 
