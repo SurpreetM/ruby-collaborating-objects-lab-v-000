@@ -14,6 +14,7 @@ class Song
     new_song = self.new(song)
     new_song.artist_name = artist
     new_song.save
+    self
   end
 
   def artist_name=(name)
@@ -28,7 +29,6 @@ class Song
 
   def save
     @@all << self
-    self
   end
 
   def self.all
