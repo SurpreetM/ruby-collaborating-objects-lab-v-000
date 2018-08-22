@@ -32,7 +32,7 @@ class Artist
   def create(artist)
     self.new(artist)
     save
-  end 
+  end
 
   def save
     @@all << self
