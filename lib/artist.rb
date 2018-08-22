@@ -21,7 +21,7 @@ class Artist
       self.find(name)
       else
         self.new(name)
-        self.save
+        save
     end
   end
 
