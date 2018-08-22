@@ -5,6 +5,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
+    @@all << self
   end
 
   def self.all
@@ -21,7 +22,6 @@ class Artist
       self.find(name)
       else
       self.new(name)
-      self.save
     end
   end
 
@@ -29,10 +29,6 @@ class Artist
     self.all.find {|artist| artist.name == name }
   end
 
-
-  def self.save
-    @@all << self
-  end
 
   def print_songs
     songs.each {|song| puts song.name}
