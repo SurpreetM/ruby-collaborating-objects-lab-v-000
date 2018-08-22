@@ -21,6 +21,7 @@ class Artist
       self.find(name)
       else
       self.new(name)
+      self.save
     end
   end
 
@@ -29,7 +30,7 @@ class Artist
   end
 
 
-  def save
+  def self.save
     @@all << self
   end
 
