@@ -20,6 +20,12 @@ class Song
      self.artist = Artist.find_or_create_by_name(name)
   end
 
+  def self.find_by_artist(artist)
+    Song.all.select do | song |
+      song.artist == artist
+    end
+  end
+
   def save
     @@all << self
     self
