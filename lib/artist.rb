@@ -20,7 +20,7 @@ class Artist
     if self.find(name) != nil
       self.find(name)
       else
-        self.new(name)
+      self.new(name)
     end
   end
 
